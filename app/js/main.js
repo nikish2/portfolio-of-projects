@@ -65,8 +65,6 @@ if (ScrollTrigger.isTouch !== 1) {
 
 
 
-
-
 // меню бургер
 // const menu = document.querySelector('.menu');
 // const burger = document.querySelector('.header__burger');

@@ -44,29 +44,109 @@ body {
 }
 
 .container {
-    padding: 0 7vw;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.work-image {
+
+    width: clamp(300px, 30vw, 500px);
+    height: 250px;
+    border-radius: 15px;
+
+    &__one {
+        background-image: url(../images/dist/past-me-light.png);
+        background-position: top;
+        background-size: cover;
+    }
+
+    &__two {
+        background-image: url(../images/dist/past-me-light-gallery.png);
+        background-position: top;
+        background-size: cover;
+    }
+
+    &__free {
+        background-image: url(../images/dist/shop.png);
+        background-position: top;
+        background-size: cover;
+
+    }
+
+    &__four {
+        background-image: url(../images/dist/vork.png);
+        background-position: top;
+        background-size: cover;
+    }
+
+    &__five {
+        background-image: url(../images/dist/pastilda.png);
+        background-position: top;
+        background-size: cover;
+
+    }
 }
 
 .header {
 
-    img {
-        width: calc(var(--index) * 35);
-        position: absolute;
-        left: 37vw;
-        top: 12vh;
-        z-index: -1;
+    &__container {
+        display: flex;
+        position: relative;
+        height: 100vh;
+    }
+
+
+    &__run-img {
+        height: 110vh;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex: 0.55;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 15px;
+    }
+
+    &__run-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        margin-bottom: 2rem;
+        animation: y-scroll 70s linear infinite;
+        border-radius: 15px;
     }
 
     &__main {
-        height: 100vh;
+        flex: 0.65;
 
         h1 {
-            font-size: calc(var(--index) * 8);
+            font-size: clamp(5rem, 12vw, 15rem);
             position: absolute;
-            width: min-content;
             bottom: 3vh;
+            width: min-content;
             line-height: .9;
         }
+    }
+}
+
+
+@keyframes y-scroll {
+    0% {
+        transform: translateY(0)
+    }
+
+    to {
+        transform: translateY(calc(-100% - 2rem))
+    }
+}
+
+
+@media screen and (max-width:1024px) {
+    .header__run-img {
+        max-height: 100vh;
+        overflow: hidden;
     }
 }
 
@@ -123,11 +203,8 @@ body {
 }
 
 @media screen and (max-width:767px) {
-    .header__main{
-        h1 {
-            bottom: 20vh;
-        }
-    }
+    .header__main {}
+
     .gallery {
         flex-direction: column;
         padding: 0;
@@ -145,7 +222,6 @@ body {
                 margin-bottom: 0;
                 margin-top: calc(var(--index) * 5);
             }
-
         }
 
         &__left,
@@ -153,16 +229,6 @@ body {
             img {
                 width: 100%;
             }
-        }
-    }
-}
-
-
-
-@media screen and (max-width:425px) {
-    .header {
-        h1 {
-            font-size: calc(var(--index) * 6);
         }
     }
 }

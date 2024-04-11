@@ -36,20 +36,59 @@
     </style>
 </head>
 
+
+// &::after,
+// &::before {
+// content: "";
+// height: 8.75rem;
+// left: 0;
+// position: absolute;
+// right: 0;
+// z-index: 1;
+// }
+
+// &::before {
+// background: linear-gradient(#2e2e2e, transparent);
+// top: 0;
+// }
+
+// &::after {
+// background: linear-gradient(0deg, #292929, transparent);
+// bottom: 0;
+// }
+
 <body>
     <div class="wrapper">
         <div class="content">
             <header class="header">
-                <picture>
-                    <source srcset="./images/dist/hero.webp" type="image/webp">
-                    <img data-speed=".5" data-lag=".5" src="./images/dist/hero.png" alt="Центральный перснонаж">
-                    <!-- data-speed скорость -->
-                    <!-- data-lag контент отстает от другого окнтенат к примеру изображение в моем случае (эффект) -->
-                </picture>
+                <!-- <picture>
+                    <source srcset="./images/dist/.webp" type="image/webp">
+                    <img data-speed=".5" data-lag=".5" src="./images/dist/.png" alt="Центральный перснонаж">
+                </picture> -->
+                <!-- data-speed скорость -->
+                <!-- data-lag контент отстает от другого окнтенат к примеру изображение в моем случае (эффект) -->
 
                 <div class="header__container container">
                     <div data-speed="0.58" class="header__main">
                         <h1>creative scroll</h1>
+                    </div>
+
+
+                    <div data-speed="0.40" data-lag="1.5" class="header__run-img">
+                        <div class="header__run-wrapper">
+                            <div class="work-image work-image__one"></div>
+                            <div class="work-image work-image__two"></div>
+                            <div class="work-image work-image__free"></div>
+                            <div class="work-image work-image__four"></div>
+                            <div class="work-image work-image__five"></div>
+                        </div>
+                        <div class="header__run-wrapper">
+                            <div class="work-image work-image__one"></div>
+                            <div class="work-image work-image__two"></div>
+                            <div class="work-image work-image__free"></div>
+                            <div class="work-image work-image__four"></div>
+                            <div class="work-image work-image__five"></div>
+                        </div>
                     </div>
                 </div>
             </header>
@@ -60,8 +99,8 @@
                         <div class="gallery">
                             <div data-speed=".9" class="gallery__left">
                                 <picture>
-                                    <source srcset="./images/dist/1.webp" type="image/webp">
-                                    <img  class="gallery__item" src="./images/dist/1.jpg" alt="карточка">
+                                    <source srcset="./images/dist/past-me-light.webp" type="image/webp">
+                                    <img class="gallery__item" src="./images/dist/past-me-light.jpg" alt="карточка">
                                 </picture>
 
                                 <div class="gallery__text-block gallery__item">
@@ -74,15 +113,15 @@
                                     </p>
                                 </div>
 
-                                <picture >
-                                    <source srcset="./images/dist/2.webp" type="image/webp">
-                                    <img class="gallery__item" src="./images/dist/2.jpg" alt="карточка">
+                                <picture>
+                                    <source srcset="./images/dist/pastilda.webp" type="image/webp">
+                                    <img class="gallery__item" src="./images/dist/pastilda.png" alt="карточка">
                                 </picture>
 
-                                <picture >
+                                <!-- <picture>
                                     <source srcset="./images/dist/5.webp" type="image/webp">
                                     <img class="gallery__item" src="./images/dist/5.jpg" alt="карточка">
-                                </picture>
+                                </picture> -->
                             </div>
 
                             <div data-speed="1.1" class="gallery__right">
@@ -96,13 +135,13 @@
                                     </p>
                                 </div>
 
-                                <picture >
-                                    <source srcset="./images/dist/3.webp" type="image/webp">
-                                    <img class="gallery__item" src="./images/dist/3.jpg" alt="карточка">
+                                <picture>
+                                    <source srcset="./images/dist/shop.webp" type="image/webp">
+                                    <img class="gallery__item" src="./images/dist/shop.jpg" alt="карточка">
                                 </picture>
-                                <picture >
-                                    <source srcset="./images/dist/4.webp" type="image/webp">
-                                    <img class="gallery__item" src="./images/dist/4.jpg" alt="карточка">
+                                <picture>
+                                    <source srcset="./images/dist/vork.webp" type="image/webp">
+                                    <img class="gallery__item" src="./images/dist/vork.jpg" alt="карточка">
                                 </picture>
 
                                 <div class="gallery__text-block gallery__item">
