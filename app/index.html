@@ -36,27 +36,6 @@
     </style>
 </head>
 
-
-// &::after,
-// &::before {
-// content: "";
-// height: 8.75rem;
-// left: 0;
-// position: absolute;
-// right: 0;
-// z-index: 1;
-// }
-
-// &::before {
-// background: linear-gradient(#2e2e2e, transparent);
-// top: 0;
-// }
-
-// &::after {
-// background: linear-gradient(0deg, #292929, transparent);
-// bottom: 0;
-// }
-
 <body>
     <div class="wrapper">
         <div class="content">
@@ -98,64 +77,145 @@
                     <div class="portfolio__container container">
                         <div class="gallery">
                             <div data-speed=".9" class="gallery__left">
-                                <picture>
-                                    <source srcset="./images/dist/past-me-light.webp" type="image/webp">
-                                    <img class="gallery__item" src="./images/dist/past-me-light.jpg" alt="карточка">
-                                </picture>
+                                <div class="gallery__inner">
+                                    <div class="gallery__popup">
+                                        <div class="swiper">
+                                            <!-- Additional required wrapper -->
+                                            <div class="swiper-wrapper">
+                                                <!-- Slides -->
+                                                <div class="swiper-slide">
+                                                    <picture>
+                                                        <source srcset="./images/dist/shop.webp" type="image/webp">
+                                                        <img src="./images/dist/shop.jpg"
+                                                            alt="карточка">
+                                                    </picture>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <picture>
+                                                        <source srcset="./images/dist/shop.webp" type="image/webp">
+                                                        <img src="./images/dist/past-me-light.jpg"
+                                                            alt="карточка">
+                                                    </picture>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <picture>
+                                                        <source srcset="./images/dist/shop.webp" type="image/webp">
+                                                        <img src="./images/dist/past-me-light.jpg"
+                                                            alt="карточка">
+                                                    </picture>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <picture>
+                                                        <source srcset="./images/dist/shop.webp" type="image/webp">
+                                                        <img src="./images/dist/shop.jpg"
+                                                            alt="карточка">
+                                                    </picture>
+                                                </div>
+                                                ...
+                                            </div>
+                                            <!-- If we need pagination -->
+                                            <div class="swiper-pagination"></div>
 
-                                <div class="gallery__text-block gallery__item">
-                                    <h2>
-                                        Creative floating scroll with amazing parallax effect
-                                    </h2>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        amount scrolling.
-                                    </p>
+                                            <!-- If we need navigation buttons -->
+                                            <div class="swiper-button-prev"></div>
+                                            <div class="swiper-button-next"></div>
+
+                                            <!-- If we need scrollbar -->
+                                            <div class="swiper-scrollbar"></div>
+                                        </div>
+                                    </div>
+                                    <picture>
+                                        <source srcset="./images/dist/past-me-light.webp" type="image/webp">
+                                        <img class="gallery__item" src="./images/dist/past-me-light.jpg" alt="карточка">
+                                    </picture>
                                 </div>
+                                <div class="gallery__inner">
+                                    <div class="gallery__popup">
 
-                                <picture>
-                                    <source srcset="./images/dist/pastilda.webp" type="image/webp">
-                                    <img class="gallery__item" src="./images/dist/pastilda.png" alt="карточка">
-                                </picture>
+                                    </div>
+                                    <div class="gallery__text-block gallery__item">
+                                        <h2>
+                                            Creative floating scroll with amazing parallax effect
+                                        </h2>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor
+                                            amount scrolling.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="gallery__inner">
+                                    <div class="gallery__popup">
 
-                                <!-- <picture>
-                                    <source srcset="./images/dist/5.webp" type="image/webp">
-                                    <img class="gallery__item" src="./images/dist/5.jpg" alt="карточка">
-                                </picture> -->
+                                    </div>
+                                    <picture>
+                                        <source srcset="./images/dist/pastilda.webp" type="image/webp">
+                                        <img class="gallery__item" src="./images/dist/pastilda.png" alt="карточка">
+                                    </picture>
+                                </div>
                             </div>
 
                             <div data-speed="1.1" class="gallery__right">
-                                <div class="gallery__text-block gallery__item">
-                                    <h2>
-                                        Creative floating scroll with amazing parallax effect
-                                    </h2>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        amount scrolling.
-                                    </p>
+                                <div class="gallery__inner gallery__inner_right">
+                                    <div class="gallery__popup gallery__popup_right">
+
+                                    </div>
+                                    <div class="gallery__text-block gallery__item">
+                                        <h2>
+                                            Creative floating scroll with amazing parallax effect
+                                        </h2>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor
+                                            amount scrolling.
+                                        </p>
+                                    </div>
                                 </div>
 
-                                <picture>
-                                    <source srcset="./images/dist/shop.webp" type="image/webp">
-                                    <img class="gallery__item" src="./images/dist/shop.jpg" alt="карточка">
-                                </picture>
-                                <picture>
-                                    <source srcset="./images/dist/vork.webp" type="image/webp">
-                                    <img class="gallery__item" src="./images/dist/vork.jpg" alt="карточка">
-                                </picture>
+                                <div class="gallery__inner gallery__inner_right">
+                                    <div class="gallery__popup gallery__popup_right">
 
-                                <div class="gallery__text-block gallery__item">
-                                    <h2>
-                                        Creative floating scroll with amazing parallax effect
-                                    </h2>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        amount scrolling.
-                                    </p>
+                                    </div>
+                                    <picture>
+                                        <source srcset="./images/dist/shop.webp" type="image/webp">
+                                        <img class="gallery__item" src="./images/dist/shop.jpg" alt="карточка">
+                                    </picture>
+                                </div>
+
+                                <div class="gallery__inner gallery__inner_right">
+                                    <div class="gallery__popup gallery__popup_right">
+
+                                    </div>
+                                    <picture>
+                                        <source srcset="./images/dist/vork.webp" type="image/webp">
+                                        <img class="gallery__item" src="./images/dist/vork.jpg" alt="карточка">
+                                    </picture>
+                                </div>
+
+                                <div class="gallery__inner gallery__inner_right">
+                                    <div class="gallery__popup gallery__popup_right">
+
+                                    </div>
+                                    <div class="gallery__text-block gallery__item">
+                                        <h2>
+                                            Creative floating scroll with amazing parallax effect
+                                        </h2>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor
+                                            amount scrolling.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    <!-- <div class="popup__gallery _active">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim est delectus atque repellendus? Iusto, quo neque iste dignissimos quia placeat, delectus, facilis expedita inventore ut quaerat saepe aut! Nesciunt, cupiditate dignissimos aspernatur quia libero alias optio voluptate amet laboriosam dolore nobis recusandae voluptas reprehenderit obcaecati. Voluptates dolores dolor hic dolorum.
+                        </p>
+                    </div> -->
                 </section>
             </main>
         </div>

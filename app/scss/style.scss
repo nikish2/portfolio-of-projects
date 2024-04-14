@@ -98,7 +98,7 @@ body {
 
 
     &__run-img {
-        height: 110vh;
+        height: 105vh;
         position: relative;
         overflow: hidden;
         display: flex;
@@ -124,7 +124,7 @@ body {
         h1 {
             font-size: clamp(5rem, 12vw, 15rem);
             position: absolute;
-            bottom: 3vh;
+            bottom: 15vh;
             width: min-content;
             line-height: .9;
         }
@@ -163,15 +163,40 @@ body {
     }
 
     &__right {
+        margin-top: calc(var(--index) * 6);
+
         .gallery__item {
             margin-bottom: 0;
-            margin-top: calc(var(--index) * 10);
         }
+    }
 
+    &__inner {
+        position: relative;
+        margin-bottom: calc(var(--index) * 10);
+        
+        &_right{
+            display: flex;
+            flex-direction: row-reverse;
+        }
+    }
+
+    &__popup {
+        width: 0%;
+        height: 100%;
+        position: absolute;
+        background-color: red;
+        z-index: 2;
+        opacity: 0;
+        border-radius: 10px;
+        transition: linear 0.5s;
+
+        &_right {
+            bottom: 0;
+
+        }
     }
 
     &__item {
-        margin-bottom: calc(var(--index) * 10);
         max-width: calc(var(--index) * 18);
         max-height: 90vh;
         border-radius: 10px;
@@ -179,6 +204,8 @@ body {
 
     &__text-block {
         color: var(--color-title);
+        pointer-events: none;
+        cursor: default;
 
         h2 {
             font-family: outfit;
@@ -201,6 +228,23 @@ body {
     align-items: center;
     flex-direction: column;
 }
+
+._active {
+    width: 100%;
+    opacity: 1;
+}
+.swiper-slide{
+    overflow: hidden;
+    max-width: 899px;
+    img{
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+
 
 @media screen and (max-width:767px) {
     .header__main {}

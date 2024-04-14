@@ -5,63 +5,78 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
 
 if (ScrollTrigger.isTouch !== 1) {
 
-  ScrollSmoother.create({
-    wrapper: '.wrapper',
-    content: '.content',
-    smoot: 1.5,  // скорость скрола
-    effects: true   // управление эффектами элементов (замедлять и тд)
-  })
+    ScrollSmoother.create({
+        wrapper: '.wrapper',
+        content: '.content',
+        smoot: 1.5,
+        effects: true
+    })
+    //   скорость скрола
+    //   управление эффектами элементов (замедлять и тд)
+    gsap.fromTo('.header',
+        {
+            opacity: 1
+        },
+        {
+            opacity: 0,
+            scrollTrigger: {
+                trigger: '.header',
+                start: 'center',
+                end: '1200',
+                scrub: true
+            }
+        })
 
-  gsap.fromTo('.header',
-    {
-      opacity: 1
-    },
-    {
-      opacity: 0,
-      scrollTrigger: {
-        trigger: '.header',
-        start: 'center',
-        end: '1400',
-        scrub: true
-      }
+    let itemsL = gsap.utils.toArray('.gallery__left .gallery__inner')
+
+    itemsL.forEach(item => {
+        gsap.fromTo(item, {
+            x: -150,
+            opacity: 0,
+        },
+            {
+                opacity: 1,
+                x: 0,
+                scrollTrigger: {
+                    trigger: item,
+                    scrub: true
+                }
+            })
     })
 
-  let itemsL = gsap.utils.toArray('.gallery__left .gallery__item')
+    let itemsR = gsap.utils.toArray('.gallery__right .gallery__inner')
 
-  itemsL.forEach(item => {
-    gsap.fromTo(item, {
-      x: -150,
-      opacity: 0,
-    }, 
-      {
-        opacity: 1,
-        x: 0,
-        scrollTrigger: {
-          trigger: item,
-          scrub: true
-        }
-      })
-  })
-
-  let itemsR = gsap.utils.toArray('.gallery__right .gallery__item')
-
-  itemsR.forEach(item => {
-    gsap.fromTo(item, {
-      x: 90,
-      opacity: 0,
-    }, 
-      {
-        opacity: 1,
-        x: 0,
-        scrollTrigger: {
-          trigger: item,
-          scrub: true
-        }
-      })
-  })
+    itemsR.forEach(item => {
+        gsap.fromTo(item, {
+            x: 90,
+            opacity: 0,
+        },
+            {
+                opacity: 1,
+                x: 0,
+                scrollTrigger: {
+                    trigger: item,
+                    scrub: true
+                }
+            })
+    })
 }
 
 
+let galleryImage = document.querySelectorAll('.gallery__item');
+let popup = document.querySelectorAll('.gallery__popup');
+
+for (let i = 0; i < galleryImage.length; i++) {
+    galleryImage[i].addEventListener('click', () => {
+        popup[i].classList.add('_active');
+    })
+}
+// for (let i = 0; i < popup.length; i++) {
+//     popup[i].addEventListener('click', () => {
+//         popup[i].classList.remove('_active');
+//     })
+// }
+// сделать кнопку выходи что бы слайдер попап зпкрывался через кнопку
 
 
 
@@ -83,28 +98,21 @@ if (ScrollTrigger.isTouch !== 1) {
 
 
 // свайвер
-// let swiper = new Swiper(".mySwiper", {
-//   slidesPerView: 1,
-//   spaceBetween: 10,
-//   pagination: {
-//     el: ".swiper-pagination",
-//     clickable: true,
-//   },
-//   breakpoints: {
-//     640: {
-//       slidesPerView: 2,
-//       spaceBetween: 20,
-//     },
-//     768: {
-//       slidesPerView: 4,
-//       spaceBetween: 30,
-//     },
-//     1024: {
-//       slidesPerView: 5,
-//       spaceBetween: 40,
-//     },
-//   },
-// });
+  const swiper = new Swiper('.swiper', {
+
+    direction: 'horizontal',
+    loop: true,
+  
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+  
 
 // let swiperTwo = new Swiper(".mySwiper-two", {
 //   slidesPerView: 1,
