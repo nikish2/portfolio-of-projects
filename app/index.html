@@ -28,10 +28,84 @@
             background-image: -ms-image-set (url("./images/dist/bg.webp") 1x,
                     url("./images/dist/bg.jpg") 1x);
 
-
             /* Для Firefox */
             background-image: image-set("./images/dist/bg.webp" type("image/webp") 1x,
                     "./images/dist/bg.jpg" type("image/jpg") 1x);
+        }
+
+        .work-image__one {
+            background-image: url("./images/dist/past-me-light.png");
+
+            /* Для Chrome и Safari */
+            background-image: -webkit-image-set (url("./images/dist/past-me-light.webp") 1x,
+                    url("./images/dist/past-me-light.png") 1x);
+
+            background-image: -ms-image-set (url("./images/dist/past-me-light.webp") 1x,
+                    url("./images/dist/past-me-light.png") 1x);
+
+            /* Для Firefox */
+            background-image: image-set("./images/dist/past-me-light.webp" type("image/webp") 1x,
+                    "./images/dist/past-me-light.png" type("image/png") 1x);
+        }
+
+        .work-image__two {
+            background-image: url("./images/dist/past-me-light-gallery.png");
+
+            /* Для Chrome и Safari */
+            background-image: -webkit-image-set (url("./images/dist/past-me-light-gallery.webp") 1x,
+                    url("./images/dist/past-me-light-gallery.png") 1x);
+
+            background-image: -ms-image-set (url("./images/dist/past-me-light-gallery.webp") 1x,
+                    url("./images/dist/past-me-light-gallery.png") 1x);
+
+            /* Для Firefox */
+            background-image: image-set("./images/dist/past-me-light-gallery.webp" type("image/webp") 1x,
+                    "./images/dist/past-me-light-gallery.png" type("image/png") 1x);
+        }
+
+        .work-image__free {
+            background-image: url("./images/dist/shop.png");
+
+            /* Для Chrome и Safari */
+            background-image: -webkit-image-set (url("./images/dist/shop.webp") 1x,
+                    url("./images/dist/shop.png") 1x);
+
+            background-image: -ms-image-set (url("./images/dist/shop.webp") 1x,
+                    url("./images/dist/shop.png") 1x);
+
+            /* Для Firefox */
+            background-image: image-set("./images/dist/shop.webp" type("image/webp") 1x,
+                    "./images/dist/shop.png" type("image/png") 1x);
+        }
+
+        .work-image__four {
+            background-image: url("./images/dist/vork.png");
+
+            /* Для Chrome и Safari */
+            background-image: -webkit-image-set (url("./images/dist/vork.webp") 1x,
+                    url("./images/dist/vork.png") 1x);
+
+            background-image: -ms-image-set (url("./images/dist/vork.webp") 1x,
+                    url("./images/dist/vork.png") 1x);
+
+            /* Для Firefox */
+            background-image: image-set("./images/dist/vork.webp" type("image/webp") 1x,
+                    "./images/dist/vork.png" type("image/png") 1x);
+        }
+
+        .work-image__five {
+            background-image: url("./images/dist/pastilda.png");
+
+            /* Для Chrome и Safari */
+            background-image: -webkit-image-set (url("./images/dist/pastilda.webp") 1x,
+                    url("./images/dist/pastilda.png") 1x);
+
+            background-image: -ms-image-set (url("./images/dist/pastilda.webp") 1x,
+                    url("./images/dist/pastilda.png") 1x);
+
+            /* Для Firefox */
+            background-image: image-set("./images/dist/pastilda.webp" type("image/webp") 1x,
+                    "./images/dist/pastilda.png" type("image/png") 1x);
         }
     </style>
 </head>
@@ -40,13 +114,6 @@
     <div class="wrapper">
         <div class="content">
             <header class="header">
-                <!-- <picture>
-                    <source srcset="./images/dist/.webp" type="image/webp">
-                    <img data-speed=".5" data-lag=".5" src="./images/dist/.png" alt="Центральный перснонаж">
-                </picture> -->
-                <!-- data-speed скорость -->
-                <!-- data-lag контент отстает от другого окнтенат к примеру изображение в моем случае (эффект) -->
-
                 <div class="header__container container">
                     <div data-speed="0.58" class="header__main">
                         <h1>creative scroll</h1>
@@ -72,150 +139,168 @@
                 </div>
             </header>
 
+
             <main>
                 <section class="portfolio">
                     <div class="portfolio__container container">
                         <div class="gallery">
                             <div data-speed=".9" class="gallery__left">
-                                <div class="gallery__inner">
-                                    <div class="gallery__popup">
-                                        <div class="swiper">
-                                            <!-- Additional required wrapper -->
-                                            <div class="swiper-wrapper">
-                                                <!-- Slides -->
-                                                <div class="swiper-slide">
-                                                    <picture>
-                                                        <source srcset="./images/dist/shop.webp" type="image/webp">
-                                                        <img src="./images/dist/shop.jpg"
-                                                            alt="карточка">
-                                                    </picture>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <picture>
-                                                        <source srcset="./images/dist/shop.webp" type="image/webp">
-                                                        <img src="./images/dist/past-me-light.jpg"
-                                                            alt="карточка">
-                                                    </picture>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <picture>
-                                                        <source srcset="./images/dist/shop.webp" type="image/webp">
-                                                        <img src="./images/dist/past-me-light.jpg"
-                                                            alt="карточка">
-                                                    </picture>
-                                                </div>
-                                                <div class="swiper-slide">
-                                                    <picture>
-                                                        <source srcset="./images/dist/shop.webp" type="image/webp">
-                                                        <img src="./images/dist/shop.jpg"
-                                                            alt="карточка">
-                                                    </picture>
-                                                </div>
-                                                ...
-                                            </div>
-                                            <!-- If we need pagination -->
-                                            <div class="swiper-pagination"></div>
-
-                                            <!-- If we need navigation buttons -->
-                                            <div class="swiper-button-prev"></div>
-                                            <div class="swiper-button-next"></div>
-
-                                            <!-- If we need scrollbar -->
-                                            <div class="swiper-scrollbar"></div>
+                                <div class="swiper mySwiper gallery__item">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="./images/dist/shop.png" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./images/dist/shop2.png" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./images/dist/shop3.png" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./images/dist/shop4.png" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./images/dist/shop5.png" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./images/dist/shop6.png" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./images/dist/shop7.png" alt="">
                                         </div>
                                     </div>
-                                    <picture>
-                                        <source srcset="./images/dist/past-me-light.webp" type="image/webp">
-                                        <img class="gallery__item" src="./images/dist/past-me-light.jpg" alt="карточка">
-                                    </picture>
+                                    <div class="swiper-pagination"></div>
                                 </div>
-                                <div class="gallery__inner">
-                                    <div class="gallery__popup">
 
-                                    </div>
-                                    <div class="gallery__text-block gallery__item">
-                                        <h2>
-                                            Creative floating scroll with amazing parallax effect
-                                        </h2>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                            tempor
-                                            amount scrolling.
-                                        </p>
-                                    </div>
+                                <div class="gallery__text-block gallery__item">
+                                    <h2>
+                                        Creative floating scroll with amazing parallax effect
+                                    </h2>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                        tempor
+                                        amount scrolling.
+                                    </p>
                                 </div>
-                                <div class="gallery__inner">
-                                    <div class="gallery__popup">
 
+                                <div class="swiper mySwiper gallery__item">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="./images/dist/pastilda.png" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./images/dist/pastilda2.png" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./images/dist/pastilda3.png" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./images/dist/pastilda4.png" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./images/dist/pastilda5.png" alt="">
+                                        </div>
                                     </div>
-                                    <picture>
-                                        <source srcset="./images/dist/pastilda.webp" type="image/webp">
-                                        <img class="gallery__item" src="./images/dist/pastilda.png" alt="карточка">
-                                    </picture>
+                                    <div class="swiper-pagination"></div>
                                 </div>
                             </div>
 
                             <div data-speed="1.1" class="gallery__right">
-                                <div class="gallery__inner gallery__inner_right">
-                                    <div class="gallery__popup gallery__popup_right">
 
-                                    </div>
-                                    <div class="gallery__text-block gallery__item">
-                                        <h2>
-                                            Creative floating scroll with amazing parallax effect
-                                        </h2>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                            tempor
-                                            amount scrolling.
-                                        </p>
-                                    </div>
+                                <div class="gallery__text-block gallery__item">
+                                    <h2>
+                                        Creative floating scroll with amazing parallax effect
+                                    </h2>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                        tempor
+                                        amount scrolling.
+                                    </p>
                                 </div>
 
-                                <div class="gallery__inner gallery__inner_right">
-                                    <div class="gallery__popup gallery__popup_right">
-
+                                <div class="swiper mySwiper gallery__item">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="./images/dist/past.png" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./images/dist/past2.png" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./images/dist/past3.png" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./images/dist/past4.png" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./images/dist/past5Galeery.png" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./images/dist/past6Galeery.png" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./images/dist/past7Galeery.png" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./images/dist/past8Galeery.png" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./images/dist/past9Galeery.png" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./images/dist/past10Galeery.png" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./images/dist/past11Galeery.png" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./images/dist/past12Galeery.png" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./images/dist/past13Galeery.png" alt="">
+                                        </div>
                                     </div>
-                                    <picture>
-                                        <source srcset="./images/dist/shop.webp" type="image/webp">
-                                        <img class="gallery__item" src="./images/dist/shop.jpg" alt="карточка">
-                                    </picture>
+                                    <div class="swiper-pagination"></div>
                                 </div>
 
-                                <div class="gallery__inner gallery__inner_right">
-                                    <div class="gallery__popup gallery__popup_right">
-
+                                <div class="swiper mySwiper gallery__item">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="./images/dist/work.png" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./images/dist/work2.png" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./images/dist/work3.png" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./images/dist/work4.png" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./images/dist/work5.png" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./images/dist/work6.png" alt="">
+                                        </div>
                                     </div>
-                                    <picture>
-                                        <source srcset="./images/dist/vork.webp" type="image/webp">
-                                        <img class="gallery__item" src="./images/dist/vork.jpg" alt="карточка">
-                                    </picture>
+                                    <div class="swiper-pagination"></div>
                                 </div>
 
-                                <div class="gallery__inner gallery__inner_right">
-                                    <div class="gallery__popup gallery__popup_right">
-
-                                    </div>
-                                    <div class="gallery__text-block gallery__item">
-                                        <h2>
-                                            Creative floating scroll with amazing parallax effect
-                                        </h2>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                            tempor
-                                            amount scrolling.
-                                        </p>
-                                    </div>
+                                <div class="gallery__text-block gallery__item">
+                                    <h2>
+                                        Creative floating scroll with amazing parallax effect
+                                    </h2>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                        tempor
+                                        amount scrolling.
+                                    </p>
                                 </div>
                             </div>
+
                         </div>
                     </div>
-
-                    <!-- <div class="popup__gallery _active">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim est delectus atque repellendus? Iusto, quo neque iste dignissimos quia placeat, delectus, facilis expedita inventore ut quaerat saepe aut! Nesciunt, cupiditate dignissimos aspernatur quia libero alias optio voluptate amet laboriosam dolore nobis recusandae voluptas reprehenderit obcaecati. Voluptates dolores dolor hic dolorum.
-                        </p>
-                    </div> -->
                 </section>
             </main>
         </div>

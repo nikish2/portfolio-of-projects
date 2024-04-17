@@ -22,21 +22,22 @@ if (ScrollTrigger.isTouch !== 1) {
             scrollTrigger: {
                 trigger: '.header',
                 start: 'center',
-                end: '1200',
+                end: '1300',
                 scrub: true
             }
         })
 
-    let itemsL = gsap.utils.toArray('.gallery__left .gallery__inner')
+    let itemsL = gsap.utils.toArray('.gallery__left .gallery__item')
 
     itemsL.forEach(item => {
         gsap.fromTo(item, {
-            x: -150,
+            x: -110,
             opacity: 0,
         },
             {
                 opacity: 1,
                 x: 0,
+               
                 scrollTrigger: {
                     trigger: item,
                     scrub: true
@@ -44,7 +45,7 @@ if (ScrollTrigger.isTouch !== 1) {
             })
     })
 
-    let itemsR = gsap.utils.toArray('.gallery__right .gallery__inner')
+    let itemsR = gsap.utils.toArray('.gallery__right .gallery__item')
 
     itemsR.forEach(item => {
         gsap.fromTo(item, {
@@ -60,156 +61,81 @@ if (ScrollTrigger.isTouch !== 1) {
                 }
             })
     })
-}
 
 
-let galleryImage = document.querySelectorAll('.gallery__item');
-let popup = document.querySelectorAll('.gallery__popup');
+    let itemsTextL = gsap.utils.toArray('.gallery__left .gallery__text-block')
 
-for (let i = 0; i < galleryImage.length; i++) {
-    galleryImage[i].addEventListener('click', () => {
-        popup[i].classList.add('_active');
+    itemsTextL.forEach(item => {
+        gsap.fromTo(item, {
+            rotationY: 55,
+            transformPerspective: 500,
+        },
+            {
+                rotationY: 0,
+                scrollTrigger: {
+                    trigger: item,
+                    scrub: true
+                }
+            })
+    })
+
+    let itemsTextR = gsap.utils.toArray('.gallery__right .gallery__text-block')
+
+    itemsTextR.forEach(item => {
+        gsap.fromTo(item, {
+            rotationY: -55,
+            transformPerspective: 400,
+        },
+            {
+                rotationY: 0,
+                scrollTrigger: {
+                    trigger: item,
+                    scrub: true
+                }
+            })
     })
 }
-// for (let i = 0; i < popup.length; i++) {
-//     popup[i].addEventListener('click', () => {
+
+
+// свайвер
+var swiper = new Swiper(".mySwiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    centeredSlidesBounds: true,
+    coverflowEffect: {
+      rotate: 50,
+      stretch: 1,
+      depth: 100,
+      modifier: 1,
+      slideShadows: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+    },
+  });
+
+
+// let galleryImage = document.querySelectorAll('.gallery__item');
+
+
+// let popup = document.querySelectorAll('.gallery__popup');
+// let exit = document.querySelectorAll('.gallery__popup-exit');
+
+// for (let i = 0; i < galleryImage.length; i++) {
+//     galleryImage[i].addEventListener('click', () => {
+//         popup[i].classList.add('_active');
+//     })
+
+//     console.log(galleryImage);
+// }
+// for (let i = 0; i < exit.length; i++) {
+//     exit[i].addEventListener('click', () => {
 //         popup[i].classList.remove('_active');
 //     })
 // }
 // сделать кнопку выходи что бы слайдер попап зпкрывался через кнопку
-
-
-
-// меню бургер
-// const menu = document.querySelector('.menu');
-// const burger = document.querySelector('.header__burger');
-// const burgerContent = document.querySelector('.header__content');
-// const hiddenSectionTwo = document.querySelector('.header__section-two');
-
-// if (menu && burger && burgerContent && hiddenSectionTwo) {
-//   burger.addEventListener('click', () => {
-//     menu.classList.toggle('_active');
-//     burger.classList.toggle('_active');
-//     burgerContent.classList.toggle('_full');
-//     hiddenSectionTwo.classList.toggle('_full');
-//   })
-// }
-
-
-
-// свайвер
-  const swiper = new Swiper('.swiper', {
-
-    direction: 'horizontal',
-    loop: true,
-  
-    pagination: {
-      el: '.swiper-pagination',
-    },
-  
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  });
-  
-
-// let swiperTwo = new Swiper(".mySwiper-two", {
-//   slidesPerView: 1,
-//   spaceBetween: 10,
-//   pagination: {
-//     el: ".swiper-pagination",
-//     clickable: true,
-//   },
-//   breakpoints: {
-//     640: {
-//       slidesPerView: 1,
-//       spaceBetween: 20,
-//     },
-//     768: {
-//       slidesPerView: 2,
-//       spaceBetween: 30,
-//     },
-//     1024: {
-//       slidesPerView: 3,
-//       spaceBetween: 40,
-//     },
-//   },
-// });
-
-
-
-
-
-
-
-
-//анимации
-// gsap.registerPlugin(ScrollTrigger)
-
-// const laptopScreen = window.matchMedia('(min-width:767px)');
-
-// if (laptopScreen.matches) {
-
-// create-section
-
-// gsap.fromTo(
-//   ".anim1",
-//   {
-//     opacity: 0,
-//     xPercent: 50,
-//   },
-//   {
-//     scrollTrigger: {
-//       trigger: '.create__description',
-//       start: 'top center ',
-
-//     },
-//     duration: 1.5,
-//     opacity: 1,
-//     xPercent: 0,
-//     ease: "none"
-//   });
-
-// gsap.fromTo(
-//   ".anim2",
-//   {
-//     opacity: 0,
-//     xPercent: -50,
-//   },
-//   {
-//     scrollTrigger: {
-//       trigger: '.anim1',
-//       start: 'center center',
-
-//     },
-//     duration: 1.5,
-//     opacity: 1,
-//     xPercent: 0,
-//     ease: "none"
-//   });
-// gsap.fromTo(
-//   ".anim3",
-//   {
-//     opacity: 0,
-//     xPercent: 50,
-//   },
-//   {
-//     scrollTrigger: {
-//       trigger: '.anim2',
-//       start: 'center center',
-
-//     },
-//     duration: 1.5,
-//     opacity: 1,
-//     xPercent: 0,
-//     ease: "none"
-//   });
-// templates-section
-
-
-
-
 
 
 
