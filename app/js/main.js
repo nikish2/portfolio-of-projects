@@ -26,52 +26,55 @@ if (ScrollTrigger.isTouch !== 1) {
                 scrub: true
             }
         })
-
+    // элементы левой галереи
     let itemsL = gsap.utils.toArray('.gallery__left .gallery__item')
-
     itemsL.forEach(item => {
         gsap.fromTo(item, {
-            x: -110,
+            x: -90,
             opacity: 0,
+            rotationY: 35,
+            transformPerspective: 1200,
         },
             {
+                rotationY: 0,
                 opacity: 1,
                 x: 0,
-               
                 scrollTrigger: {
                     trigger: item,
-                    scrub: true
+                    scrub: true,
+                    end: 'center'
                 }
             })
     })
-
+    // эдементы правой галереи
     let itemsR = gsap.utils.toArray('.gallery__right .gallery__item')
-
     itemsR.forEach(item => {
         gsap.fromTo(item, {
             x: 90,
             opacity: 0,
+            rotationY: -35,
+            transformPerspective: 1200,
         },
             {
+                rotationY: 0,
                 opacity: 1,
                 x: 0,
                 scrollTrigger: {
                     trigger: item,
-                    scrub: true
+                    scrub: true,
+                    end: 'center'
                 }
             })
     })
-
-
-    let itemsTextL = gsap.utils.toArray('.gallery__left .gallery__text-block')
+    // текстовые элементы левой галереи
+    let itemsTextL = gsap.utils.toArray('.gallery  .gallery__text-block')
 
     itemsTextL.forEach(item => {
         gsap.fromTo(item, {
-            rotationY: 55,
-            transformPerspective: 500,
+            scale: 0,
         },
             {
-                rotationY: 0,
+                scale: 1.1,
                 scrollTrigger: {
                     trigger: item,
                     scrub: true
@@ -79,64 +82,118 @@ if (ScrollTrigger.isTouch !== 1) {
             })
     })
 
-    let itemsTextR = gsap.utils.toArray('.gallery__right .gallery__text-block')
-
-    itemsTextR.forEach(item => {
+    // элементы левой галереи страница вторая 
+    let itemsLeftTwo = gsap.utils.toArray('.gallery-page2__left .gallery-page2__item')
+    itemsLeftTwo.forEach(item => {
         gsap.fromTo(item, {
-            rotationY: -55,
-            transformPerspective: 400,
+            opacity: .7,
+            rotationY: 2,
+            transformPerspective: 1200,
         },
             {
                 rotationY: 0,
+                opacity: 1,
+
                 scrollTrigger: {
                     trigger: item,
-                    scrub: true
+                    scrub: true,
+                    end: 'center'
+                }
+            })
+    })
+
+    // элементы правой галереи страница вторая 
+    let itemsRightTwo = gsap.utils.toArray('.gallery-page2__right .gallery-page2__item')
+    itemsRightTwo.forEach(item => {
+        gsap.fromTo(item, {
+            opacity: .7,
+            rotationY: -2,
+            transformPerspective: 1200,
+        },
+            {
+                rotationY: 0,
+                opacity: 1,
+                scrollTrigger: {
+                    trigger: item,
+                    scrub: true,
+                    end: 'center'
                 }
             })
     })
 }
+// свайпер
+
+    // Поиск элемента с классом mySwiper
+    let swiper = document.querySelector(".mySwiper");
+
+    // Проверка, найден ли элемент с указанным классом
+    if (swiper) {
+        // Если найден, выполнить инициализацию Swiper
+         swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            centeredSlidesBounds: true,
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 1,
+                depth: 100,
+                modifier: 1,
+                slideShadows: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            }
+        });
+    }
 
 
-// свайвер
-var swiper = new Swiper(".mySwiper", {
-    effect: "coverflow",
-    grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: "auto",
-    centeredSlidesBounds: true,
-    coverflowEffect: {
-      rotate: 50,
-      stretch: 1,
-      depth: 100,
-      modifier: 1,
-      slideShadows: false,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-    },
-  });
+// Печатающийся текст
 
 
-// let galleryImage = document.querySelectorAll('.gallery__item');
+const path = window.location.pathname;
+if (path === '/index.html') {
+    let typed = document.querySelector("#text");
+    if (typed) {
+        typed = new Typed('#text', {
+            strings: ['Продающие. ^600', 'Адаптивные. ^600', 'Креативные. ^600', 'Быстрые. ^600'],
+            typeSpeed: 150,
+            loop: true
+        });
+    }
+}
+
+if (path === '/full-page.html') {
+    let typedTwo = document.querySelector("#text2");
+    if (typedTwo) {
+        typedTwo = new Typed('#text2', {
+            strings: ['Cайт для вашего бизнеса. ^600', 'Расширте свои возможности. ^600'],
+            typeSpeed: 150,
+            loop: true
+        });
+    }
+}
 
 
-// let popup = document.querySelectorAll('.gallery__popup');
-// let exit = document.querySelectorAll('.gallery__popup-exit');
-
-// for (let i = 0; i < galleryImage.length; i++) {
-//     galleryImage[i].addEventListener('click', () => {
-//         popup[i].classList.add('_active');
-//     })
-
-//     console.log(galleryImage);
-// }
-// for (let i = 0; i < exit.length; i++) {
-//     exit[i].addEventListener('click', () => {
-//         popup[i].classList.remove('_active');
-//     })
-// }
-// сделать кнопку выходи что бы слайдер попап зпкрывался через кнопку
-
+// бургер
+const menu = document.querySelector('.nav__list');
+const menuItem = document.querySelectorAll('.nav__item');
+const burger = document.querySelector('.header__burger-inner');
+const burgerExit = document.querySelector('.header__burger');
+for (let i = 0; i < menuItem.length; i++) {
+    if (menu && burger) {
+        burger.addEventListener('click', () => {
+            menu.classList.toggle('_burger-active');
+            menuItem[i].classList.toggle('_burger-active');
+            burgerExit.classList.toggle('_burger-exit');
+        })
+    }
+}
 
 
 

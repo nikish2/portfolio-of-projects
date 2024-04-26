@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.min.css">
 
-    <title></title>
+    <title>Портфолио</title>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js" defer></script>
     <script src="gsap/gsap.min.js" defer></script>
     <script src="gsap/ScrollTrigger.min.js" defer></script>
     <script src="gsap/ScrollSmoother.min.js" defer></script>
@@ -34,78 +35,78 @@
         }
 
         .work-image__one {
-            background-image: url("./images/dist/past-me-light.png");
+            background-image: url("./images/dist/past-me-light.jpg");
 
             /* Для Chrome и Safari */
             background-image: -webkit-image-set (url("./images/dist/past-me-light.webp") 1x,
-                    url("./images/dist/past-me-light.png") 1x);
+                    url("./images/dist/past-me-light.jpg") 1x);
 
             background-image: -ms-image-set (url("./images/dist/past-me-light.webp") 1x,
-                    url("./images/dist/past-me-light.png") 1x);
+                    url("./images/dist/past-me-light.jpg") 1x);
 
             /* Для Firefox */
             background-image: image-set("./images/dist/past-me-light.webp" type("image/webp") 1x,
-                    "./images/dist/past-me-light.png" type("image/png") 1x);
+                    "./images/dist/past-me-light.jpg" type("image/jpg") 1x);
         }
 
         .work-image__two {
-            background-image: url("./images/dist/past-me-light-gallery.png");
+            background-image: url("./images/dist/past-me-light-gallery.jpg");
 
             /* Для Chrome и Safari */
             background-image: -webkit-image-set (url("./images/dist/past-me-light-gallery.webp") 1x,
-                    url("./images/dist/past-me-light-gallery.png") 1x);
+                    url("./images/dist/past-me-light-gallery.jpg") 1x);
 
             background-image: -ms-image-set (url("./images/dist/past-me-light-gallery.webp") 1x,
-                    url("./images/dist/past-me-light-gallery.png") 1x);
+                    url("./images/dist/past-me-light-gallery.jpg") 1x);
 
             /* Для Firefox */
             background-image: image-set("./images/dist/past-me-light-gallery.webp" type("image/webp") 1x,
-                    "./images/dist/past-me-light-gallery.png" type("image/png") 1x);
+                    "./images/dist/past-me-light-gallery.jpg" type("image/jpg") 1x);
         }
 
         .work-image__free {
-            background-image: url("./images/dist/shop.png");
+            background-image: url("./images/dist/shop.jpg");
 
             /* Для Chrome и Safari */
             background-image: -webkit-image-set (url("./images/dist/shop.webp") 1x,
-                    url("./images/dist/shop.png") 1x);
+                    url("./images/dist/shop.jpg") 1x);
 
             background-image: -ms-image-set (url("./images/dist/shop.webp") 1x,
-                    url("./images/dist/shop.png") 1x);
+                    url("./images/dist/shop.jpg") 1x);
 
             /* Для Firefox */
             background-image: image-set("./images/dist/shop.webp" type("image/webp") 1x,
-                    "./images/dist/shop.png" type("image/png") 1x);
+                    "./images/dist/shop.jpg" type("image/jpg") 1x);
         }
 
         .work-image__four {
-            background-image: url("./images/dist/vork.png");
+            background-image: url("./images/dist/vork.jpg");
 
             /* Для Chrome и Safari */
             background-image: -webkit-image-set (url("./images/dist/vork.webp") 1x,
-                    url("./images/dist/vork.png") 1x);
+                    url("./images/dist/vork.jpg") 1x);
 
             background-image: -ms-image-set (url("./images/dist/vork.webp") 1x,
-                    url("./images/dist/vork.png") 1x);
+                    url("./images/dist/vork.jpg") 1x);
 
             /* Для Firefox */
             background-image: image-set("./images/dist/vork.webp" type("image/webp") 1x,
-                    "./images/dist/vork.png" type("image/png") 1x);
+                    "./images/dist/vork.jpg" type("image/jpg") 1x);
         }
 
         .work-image__five {
-            background-image: url("./images/dist/pastilda.png");
+            background-image: url("./images/dist/pastilda.jpg");
 
             /* Для Chrome и Safari */
             background-image: -webkit-image-set (url("./images/dist/pastilda.webp") 1x,
-                    url("./images/dist/pastilda.png") 1x);
+                    url("./images/dist/pastilda.jpg") 1x);
 
             background-image: -ms-image-set (url("./images/dist/pastilda.webp") 1x,
-                    url("./images/dist/pastilda.png") 1x);
+                    url("./images/dist/pastilda.jpg") 1x);
 
             /* Для Firefox */
             background-image: image-set("./images/dist/pastilda.webp" type("image/webp") 1x,
-                    "./images/dist/pastilda.png" type("image/png") 1x);
+                    "./images/dist/pastilda.jpg" type("image/jpg") 1x);
         }
     </style>
 </head>
@@ -115,10 +116,29 @@
         <div class="content">
             <header class="header">
                 <div class="header__container container">
-                    <div data-speed="0.58" class="header__main">
-                        <h1>creative scroll</h1>
+                    <div class="header__burger-inner">
+                        <div class="header__burger">
+                            <span></span>
+                        </div>
                     </div>
 
+                    <nav class="header__nav nav">
+                        <ul class="nav__list">
+                            <li class="nav__item">
+                                <a href="index.html" class="nav__link">Home</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="full-page.html" class="nav__link">Галерея</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">Галерея адаптив</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div data-speed="0.58" class="header__main">
+                        <h1>Создаю <br> <span id="text"></span> <br> Web-сайты</h1>
+                    </div>
 
                     <div data-speed="0.40" data-lag="1.5" class="header__run-img">
                         <div class="header__run-wrapper">
@@ -148,25 +168,46 @@
                                 <div class="swiper mySwiper gallery__item">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
-                                            <img src="./images/dist/shop.png" alt="">
+                                            <picture>
+                                                <source srcset="./images/dist/shop.webp" type="image/webp">
+                                                <img src="./images/dist/shop.jpg" alt="магазин одежды">
+                                            </picture>
                                         </div>
                                         <div class="swiper-slide">
-                                            <img src="./images/dist/shop2.png" alt="">
+                                            <picture>
+                                                <source srcset="./images/dist/shop2.webp" type="image/webp">
+                                                <img src="./images/dist/shop2.jpg" alt="магазин одежды">
+                                            </picture>
                                         </div>
                                         <div class="swiper-slide">
-                                            <img src="./images/dist/shop3.png" alt="">
+                                            <picture>
+                                                <source srcset="./images/dist/shop3.webp" type="image/webp">
+                                                <img src="./images/dist/shop3.jpg" alt="магазин одежды">
+                                            </picture>
                                         </div>
                                         <div class="swiper-slide">
-                                            <img src="./images/dist/shop4.png" alt="">
+                                            <picture>
+                                                <source srcset="./images/dist/shop4.webp" type="image/webp">
+                                                <img src="./images/dist/shop4.jpg" alt="магазин одежды">
+                                            </picture>
                                         </div>
                                         <div class="swiper-slide">
-                                            <img src="./images/dist/shop5.png" alt="">
+                                            <picture>
+                                                <source srcset="./images/dist/shop5.webp" type="image/webp">
+                                                <img src="./images/dist/shop5.jpg" alt="магазин одежды">
+                                            </picture>
                                         </div>
                                         <div class="swiper-slide">
-                                            <img src="./images/dist/shop6.png" alt="">
+                                            <picture>
+                                                <source srcset="./images/dist/shop6.webp" type="image/webp">
+                                                <img src="./images/dist/shop6.jpg" alt="магазин одежды">
+                                            </picture>
                                         </div>
                                         <div class="swiper-slide">
-                                            <img src="./images/dist/shop7.png" alt="">
+                                            <picture>
+                                                <source srcset="./images/dist/shop7.webp" type="image/webp">
+                                                <img src="./images/dist/shop7.jpg" alt="магазин одежды">
+                                            </picture>
                                         </div>
                                     </div>
                                     <div class="swiper-pagination"></div>
@@ -174,31 +215,45 @@
 
                                 <div class="gallery__text-block gallery__item">
                                     <h2>
-                                        Creative floating scroll with amazing parallax effect
+                                        Полная адаптивность.
                                     </h2>
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                        tempor
-                                        amount scrolling.
+                                        Адаптивность сайта под все устройства , с применением последних современных
+                                        технологий и минимумом медиа запросов. Создание резиновых блоков и шрифтов.
                                     </p>
                                 </div>
 
                                 <div class="swiper mySwiper gallery__item">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
-                                            <img src="./images/dist/pastilda.png" alt="">
+                                            <picture>
+                                                <source srcset="./images/dist/pastilda.webp" type="image/webp">
+                                                <img src="./images/dist/pastilda.jpg" alt="магазин пастилы">
+                                            </picture>
                                         </div>
                                         <div class="swiper-slide">
-                                            <img src="./images/dist/pastilda2.png" alt="">
+                                            <picture>
+                                                <source srcset="./images/dist/pastilda2.webp" type="image/webp">
+                                                <img src="./images/dist/pastilda2.jpg" alt="магазин пастилы">
+                                            </picture>
                                         </div>
                                         <div class="swiper-slide">
-                                            <img src="./images/dist/pastilda3.png" alt="">
+                                            <picture>
+                                                <source srcset="./images/dist/pastilda3.webp" type="image/webp">
+                                                <img src="./images/dist/pastilda3.jpg" alt="магазин пастилы">
+                                            </picture>
                                         </div>
                                         <div class="swiper-slide">
-                                            <img src="./images/dist/pastilda4.png" alt="">
+                                            <picture>
+                                                <source srcset="./images/dist/pastilda4.webp" type="image/webp">
+                                                <img src="./images/dist/pastilda4.jpg" alt="магазин пастилы">
+                                            </picture>
                                         </div>
                                         <div class="swiper-slide">
-                                            <img src="./images/dist/pastilda5.png" alt="">
+                                            <picture>
+                                                <source srcset="./images/dist/pastilda5.webp" type="image/webp">
+                                                <img src="./images/dist/pastilda5.jpg" alt="магазин пастилы">
+                                            </picture>
                                         </div>
                                     </div>
                                     <div class="swiper-pagination"></div>
@@ -209,55 +264,103 @@
 
                                 <div class="gallery__text-block gallery__item">
                                     <h2>
-                                        Creative floating scroll with amazing parallax effect
+                                        Производительность.
                                     </h2>
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                        tempor
-                                        amount scrolling.
+                                        Сжатие файлов, изображений и видео . Использование современных медиа форматов
+                                        для максимального качества и скорости.
                                     </p>
                                 </div>
 
                                 <div class="swiper mySwiper gallery__item">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
-                                            <img src="./images/dist/past.png" alt="">
+                                            <picture>
+                                                  <source srcset="./images/dist/past.webp" type="image/webp">
+                                                  <img src="./images/dist/past.jpg" alt="Магазин пастилы Питер">
+                                            </picture>                                         
                                         </div>
                                         <div class="swiper-slide">
-                                            <img src="./images/dist/past2.png" alt="">
+                                            <picture>
+                                                  <source srcset="./images/dist/past2.webp" type="image/webp">
+                                                  <img src="./images/dist/past2.jpg" alt="Магазин пастилы Питер">
+                                            </picture>                                        
                                         </div>
                                         <div class="swiper-slide">
-                                            <img src="./images/dist/past3.png" alt="">
+                                            <picture>
+                                                  <source srcset="./images/dist/past3.webp" type="image/webp">
+                                                  <img src="./images/dist/past3.jpg" alt="Магазин пастилы Питер">
+                                            </picture>
                                         </div>
                                         <div class="swiper-slide">
-                                            <img src="./images/dist/past4.png" alt="">
+                                            <picture>
+                                                  <source srcset="./images/dist/past4.webp" type="image/webp">
+                                                  <img src="./images/dist/past4.jpg" alt="Магазин пастилы Питер">
+                                            </picture>
                                         </div>
                                         <div class="swiper-slide">
-                                            <img src="./images/dist/past5Galeery.png" alt="">
+                                            <picture>
+                                                  <source srcset="./images/dist/past5Galeery.webp" type="image/webp">
+                                                  <img src="./images/dist/past5Galeery.jpg"
+                                                  alt="Магазин пастилы Питер фото галлерея">
+                                            </picture>
+
                                         </div>
                                         <div class="swiper-slide">
-                                            <img src="./images/dist/past6Galeery.png" alt="">
+                                            <picture>
+                                                  <source srcset="./images/dist/past6Galeery.webp" type="image/webp">
+                                                  <img src="./images/dist/past6Galeery.jpg"
+                                                  alt="Магазин пастилы Питер фото галлерея">
+                                            </picture>
                                         </div>
                                         <div class="swiper-slide">
-                                            <img src="./images/dist/past7Galeery.png" alt="">
+                                            <picture>
+                                                  <source srcset="./images/dist/past7Galeery.webp" type="image/webp">
+                                                  <img src="./images/dist/past7Galeery.jpg"
+                                                alt="Магазин пастилы Питер фото галлерея">
+                                            </picture>
                                         </div>
                                         <div class="swiper-slide">
-                                            <img src="./images/dist/past8Galeery.png" alt="">
+                                            <picture>
+                                                  <source srcset="./images/dist/past8Galeery.webp" type="image/webp">
+                                                  <img src="./images/dist/past8Galeery.jpg"
+                                                  alt="Магазин пастилы Питер фото галлерея">
+                                            </picture>
                                         </div>
                                         <div class="swiper-slide">
-                                            <img src="./images/dist/past9Galeery.png" alt="">
+                                            <picture>
+                                                  <source srcset="./images/dist/past9Galeery.webp" type="image/webp">
+                                                  <img src="./images/dist/past9Galeery.jpg"
+                                                alt="Магазин пастилы Питер фото галлерея">
+                                            </picture>
                                         </div>
                                         <div class="swiper-slide">
-                                            <img src="./images/dist/past10Galeery.png" alt="">
+                                            <picture>
+                                                  <source srcset="./images/dist/past10Galeery.webp" type="image/webp">
+                                                  <img src="./images/dist/past10Galeery.jpg"
+                                                  alt="Магазин пастилы Питер фото галлерея">
+                                            </picture>
                                         </div>
                                         <div class="swiper-slide">
-                                            <img src="./images/dist/past11Galeery.png" alt="">
+                                            <picture>
+                                                  <source srcset="./images/dist/past11Galeery.webp" type="image/webp">
+                                                  <img src="./images/dist/past11Galeery.jpg"
+                                                  alt="Магазин пастилы Питер фото галлерея">
+                                            </picture>
                                         </div>
                                         <div class="swiper-slide">
-                                            <img src="./images/dist/past12Galeery.png" alt="">
+                                            <picture>
+                                                  <source srcset="./images/dist/past12Galeery.webp" type="image/webp">
+                                                  <img src="./images/dist/past12Galeery.jpg"
+                                                  alt="Магазин пастилы Питер фото галлерея">
+                                            </picture>
                                         </div>
                                         <div class="swiper-slide">
-                                            <img src="./images/dist/past13Galeery.png" alt="">
+                                            <picture>
+                                                  <source srcset="./images/dist/past13Galeery.webp" type="image/webp">
+                                                  <img src="./images/dist/past13Galeery.jpg"
+                                                  alt="Магазин пастилы Питер фото галлерея">
+                                            </picture>
                                         </div>
                                     </div>
                                     <div class="swiper-pagination"></div>
@@ -266,22 +369,46 @@
                                 <div class="swiper mySwiper gallery__item">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
-                                            <img src="./images/dist/work.png" alt="">
+                                            <picture>
+                                                <source srcset="./images/dist/work.webp" type="image/webp">
+                                                <img src="./images/dist/work.jpg" alt="Организация мероприятий">
+                                            </picture>
+                                           
                                         </div>
                                         <div class="swiper-slide">
-                                            <img src="./images/dist/work2.png" alt="">
+                                            <picture>
+                                                <source srcset="./images/dist/work2.webp" type="image/webp">
+                                                <img src="./images/dist/work2.jpg" alt="Организация мероприятий">
+                                            </picture>
+                                           
                                         </div>
                                         <div class="swiper-slide">
-                                            <img src="./images/dist/work3.png" alt="">
+                                            <picture>
+                                                <source srcset="./images/dist/work3.webp" type="image/webp">
+                                                <img src="./images/dist/work3.jpg" alt="Организация мероприятий">
+                                            </picture>
+                                          
                                         </div>
                                         <div class="swiper-slide">
-                                            <img src="./images/dist/work4.png" alt="">
+                                            <picture>
+                                                <source srcset="./images/dist/work4.webp" type="image/webp">
+                                                <img src="./images/dist/work4.jpg" alt="Организация мероприятий">
+                                            </picture>
+                                           
                                         </div>
                                         <div class="swiper-slide">
-                                            <img src="./images/dist/work5.png" alt="">
+                                            <picture>
+                                                <source srcset="./images/dist/work5.webp" type="image/webp">
+                                                <img src="./images/dist/work5.jpg" alt="Организация мероприятий">
+                                            </picture>
+                                           
                                         </div>
                                         <div class="swiper-slide">
-                                            <img src="./images/dist/work6.png" alt="">
+                                            <picture>
+                                                <source srcset="./images/dist/work6.webp" type="image/webp">
+                                                <img src="./images/dist/work6.jpg" alt="Организация мероприятий">
+                                            </picture>
+                                           
                                         </div>
                                     </div>
                                     <div class="swiper-pagination"></div>
@@ -289,16 +416,14 @@
 
                                 <div class="gallery__text-block gallery__item">
                                     <h2>
-                                        Creative floating scroll with amazing parallax effect
+                                        Анимации и эффекты.
                                     </h2>
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                        tempor
-                                        amount scrolling.
+                                        Яркие ,сложные ,а главное эффектыне анимации сделают ваш сайт живым и выделят
+                                        его на фоне конкурентов.
                                     </p>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </section>

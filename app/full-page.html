@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta name="description" content="Online store for printing designs on clothes">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.min.css">
+
+    <title>Галерея</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js" defer></script>
+    <script src="gsap/gsap.min.js" defer></script>
+    <script src="gsap/ScrollTrigger.min.js" defer></script>
+    <script src="gsap/ScrollSmoother.min.js" defer></script>
+    <script src="js/main.min.js" defer></script>
+
+    <style>
+        body {
+            background-image: url("./images/dist/bg.jpg");
+
+            /* Для Chrome и Safari */
+            background-image: -webkit-image-set (url("./images/dist/bg.webp") 1x,
+                    url("./images/dist/bg.jpg") 1x);
+
+            background-image: -ms-image-set (url("./images/dist/bg.webp") 1x,
+                    url("./images/dist/bg.jpg") 1x);
+
+            /* Для Firefox */
+            background-image: image-set("./images/dist/bg.webp" type("image/webp") 1x,
+                    "./images/dist/bg.jpg" type("image/jpg") 1x);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <header class="header">
+                <div class="header__container-two container">
+                    <div class="header__burger-inner">
+                        <div class="header__burger">
+                            <span></span>
+                        </div>
+                    </div>
+
+                    <nav class="header__nav nav">
+                        <ul class="nav__list">
+                            <li class="nav__item">
+                                <a href="index.html" class="nav__link">Home</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="full-page.html" class="nav__link">Галерея</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">Галерея адаптив</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+
+            <main>
+                <section class="portfolio-page2">
+                    <div class="portfolio-page2__container container">
+                        <div class="portfolio-page2__inner">
+                            <h2 class="portfolio-page2__title">
+                                Галерея моих проектов <br>
+                                <span id="text2"></span>
+                            </h2>
+                        </div>
+
+                        <div class="gallery gallery-page2">
+                            <div data-speed=".9" class="gallery__left gallery-page2__left">
+                                <picture>
+                                    <source srcset="./images/dist/pastilaFull-fullPage.webp" type="image/webp">
+                                    <img class="gallery-page2__item" src="./images/dist/pastilaFull-fullPage.jpg" alt="Магазин пастилы">
+                                </picture>
+                               
+                                <div class="gallery-page2__item-text gallery__text-block">
+                                    <h2>
+                                        Полная адаптивность.
+                                    </h2>
+                                    <p>
+                                        Адаптивность сайта под все устройства , с применением последних современных
+                                        технологий и минимумом медиа запросов. Создание резиновых блоков и шрифтов.
+                                    </p>
+                                </div>
+
+
+                                <picture>
+                                    <source srcset="./images/dist/work-fullPage.webp" type="image/webp">
+                                    <img class="gallery-page2__item" src="./images/dist/work-fullPage.jpg" alt="Организация мероприятий">
+                                </picture>
+
+                                <div class="gallery-page2__item-text gallery__text-block">
+                                    <h2>
+                                        Анимации и эффекты.
+                                    </h2>
+                                    <p>
+                                        Яркие ,сложные ,а главное эффектыне анимации сделают ваш сайт живым и выделят
+                                        его на фоне конкурентов.
+                                    </p>
+                                </div>
+
+                                <div class="gallery-page2__wrapper-img">
+                                    <picture>
+                                        <source srcset="./images/dist/gallery-fullPage.webp" type="image/webp">
+                                        <img class="gallery-page2__item gallery-page2__overflow-y" src="./images/dist/gallery-fullPage.jpg" alt="Магазин пастилы галерея">
+                                    </picture>
+                                </div>
+                                
+                            </div>
+
+                            <div data-speed="1.1" class="gallery__right gallery-page2__right">
+                                <picture>
+                                    <source srcset="./images/dist/shop-fullPage.webp" type="image/webp">
+                                    <img class="gallery-page2__item" src="./images/dist/shop-fullPage.jpg" alt="магазин одежды">
+                                </picture>
+                               
+                                <div class="gallery-page2__item-text gallery__text-block">
+                                    <h2>
+                                        Производительность.
+                                    </h2>
+                                    <p>
+                                        Сжатие файлов, изображений и видео . Использование современных медиа форматов
+                                        для максимального качества и скорости.
+                                    </p>
+                                </div>
+
+                                <picture>
+                                    <source srcset="./images/dist/pastil2-fullPage.webp" type="image/webp">
+                                    <img class="gallery-page2__item" src="./images/dist/pastil2-fullPage.jpg" alt="Пастила">
+                                </picture>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>
