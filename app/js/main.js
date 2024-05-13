@@ -1,5 +1,6 @@
 "use strict"
 
+
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
 
 
@@ -27,7 +28,7 @@ if (ScrollTrigger.isTouch !== 1) {
             }
         })
     // элементы левой галереи
-    let itemsL = gsap.utils.toArray('.gallery__left .gallery__item')
+    let itemsL = gsap.utils.toArray('.gallery__left_gsap .gallery__item_gsap')
     itemsL.forEach(item => {
         gsap.fromTo(item, {
             x: -90,
@@ -47,7 +48,7 @@ if (ScrollTrigger.isTouch !== 1) {
             })
     })
     // эдементы правой галереи
-    let itemsR = gsap.utils.toArray('.gallery__right .gallery__item')
+    let itemsR = gsap.utils.toArray('.gallery__right_gsap .gallery__item_gsap')
     itemsR.forEach(item => {
         gsap.fromTo(item, {
             x: 90,
@@ -66,12 +67,12 @@ if (ScrollTrigger.isTouch !== 1) {
                 }
             })
     })
-    // текстовые элементы левой галереи
-    let itemsTextL = gsap.utils.toArray('.gallery  .gallery__text-block')
+    // текстовые элементы  галереи
+    let itemsTextL = gsap.utils.toArray('.gallery-gsap  .gallery__text-block_gsap')
 
     itemsTextL.forEach(item => {
         gsap.fromTo(item, {
-            scale: 0,
+            scale: .3,
         },
             {
                 scale: 1.1,
@@ -83,7 +84,7 @@ if (ScrollTrigger.isTouch !== 1) {
     })
 
     // элементы левой галереи страница вторая 
-    let itemsLeftTwo = gsap.utils.toArray('.gallery-page2__left .gallery-page2__item')
+    let itemsLeftTwo = gsap.utils.toArray('.new-page__left_gsap .new-page__item-gsap')
     itemsLeftTwo.forEach(item => {
         gsap.fromTo(item, {
             opacity: .7,
@@ -103,7 +104,7 @@ if (ScrollTrigger.isTouch !== 1) {
     })
 
     // элементы правой галереи страница вторая 
-    let itemsRightTwo = gsap.utils.toArray('.gallery-page2__right .gallery-page2__item')
+    let itemsRightTwo = gsap.utils.toArray('.new-page__right_gsap .new-page__item-gsap')
     itemsRightTwo.forEach(item => {
         gsap.fromTo(item, {
             opacity: .7,
@@ -173,6 +174,17 @@ if (path === '/full-page.html') {
     if (typedTwo) {
         typedTwo = new Typed('#text2', {
             strings: ['Cайт для вашего бизнеса. ^600', 'Расширте свои возможности. ^600'],
+            typeSpeed: 150,
+            loop: true
+        });
+    }
+}
+
+if (path === '/adaptiv.html') {
+    let typedTwo = document.querySelector("#text3");
+    if (typedTwo) {
+        typedTwo = new Typed('#text3', {
+            strings: ['1920px. ^600', '1024px. ^600', '768px. ^600', '320px. ^600'],
             typeSpeed: 150,
             loop: true
         });

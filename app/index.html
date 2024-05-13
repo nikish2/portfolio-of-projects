@@ -6,8 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?v=1.0">
+    <link rel="stylesheet" href="css/style.min.css?v=1.0">
 
     <title>Портфолио</title>
 
@@ -16,7 +16,7 @@
     <script src="gsap/gsap.min.js" defer></script>
     <script src="gsap/ScrollTrigger.min.js" defer></script>
     <script src="gsap/ScrollSmoother.min.js" defer></script>
-    <script src="js/main.min.js" defer></script>
+    <script src="js/main.min.js?v=1.0" defer></script>
 
     <style>
         body {
@@ -131,7 +131,7 @@
                                 <a href="full-page.html" class="nav__link">Галерея</a>
                             </li>
                             <li class="nav__item">
-                                <a href="#" class="nav__link">Галерея адаптив</a>
+                                <a href="adaptiv.html" class="nav__link">Галерея адаптив</a>
                             </li>
                         </ul>
                     </nav>
@@ -163,9 +163,9 @@
             <main>
                 <section class="portfolio">
                     <div class="portfolio__container container">
-                        <div class="gallery">
-                            <div data-speed=".9" class="gallery__left">
-                                <div class="swiper mySwiper gallery__item">
+                        <div class="gallery gallery-gsap">
+                            <div data-speed=".9" class="gallery__left gallery__left_gsap">
+                                <div class="swiper mySwiper gallery__item gallery__item_gsap">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
                                             <picture>
@@ -213,7 +213,7 @@
                                     <div class="swiper-pagination"></div>
                                 </div>
 
-                                <div class="gallery__text-block gallery__item">
+                                <div class="gallery__text-block gallery__text-block_gsap gallery__item">
                                     <h2>
                                         Полная адаптивность.
                                     </h2>
@@ -223,7 +223,7 @@
                                     </p>
                                 </div>
 
-                                <div class="swiper mySwiper gallery__item">
+                                <div class="swiper mySwiper gallery__item gallery__item_gsap">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
                                             <picture>
@@ -260,9 +260,9 @@
                                 </div>
                             </div>
 
-                            <div data-speed="1.1" class="gallery__right">
+                            <div data-speed="1.1" class="gallery__right gallery__right_gsap">
 
-                                <div class="gallery__text-block gallery__item">
+                                <div class="gallery__text-block gallery__text-block_gsap gallery__item">
                                     <h2>
                                         Производительность.
                                     </h2>
@@ -272,7 +272,7 @@
                                     </p>
                                 </div>
 
-                                <div class="swiper mySwiper gallery__item">
+                                <div class="swiper mySwiper gallery__item gallery__item_gsap">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
                                             <picture>
@@ -366,7 +366,7 @@
                                     <div class="swiper-pagination"></div>
                                 </div>
 
-                                <div class="swiper mySwiper gallery__item">
+                                <div class="swiper mySwiper gallery__item gallery__item_gsap">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
                                             <picture>
@@ -414,7 +414,7 @@
                                     <div class="swiper-pagination"></div>
                                 </div>
 
-                                <div class="gallery__text-block gallery__item">
+                                <div class="gallery__text-block gallery__text-block_gsap gallery__item">
                                     <h2>
                                         Анимации и эффекты.
                                     </h2>
